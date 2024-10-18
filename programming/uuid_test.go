@@ -7,13 +7,15 @@ import (
 )
 
 func TestNewUUIDWithHyphen(t *testing.T) {
-	uuidWithHyphen := NewUUID(false)
+	s := NewService()
+	uuidWithHyphen := s.NewUUID(false)
 	assert.Len(t, uuidWithHyphen, 36)
 	assert.Contains(t, uuidWithHyphen, "-")
 }
 
 func TestNewUUIDWithoutHyphen(t *testing.T) {
-	uuidWithoutHyphen := NewUUID(true)
+	s := NewService()
+	uuidWithoutHyphen := s.NewUUID(true)
 	assert.Len(t, uuidWithoutHyphen, 32)
 	assert.NotContains(t, uuidWithoutHyphen, "-")
 }
