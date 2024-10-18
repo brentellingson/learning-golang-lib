@@ -1,3 +1,3 @@
-module github.com/brentellingson/learning-go-lang-lib
+module github.com/brentellingson/learning-golang-lib
 
 go 1.23.2
