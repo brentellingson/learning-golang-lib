@@ -3,9 +3,6 @@
 build: lint
 	go build
 
-run: lint
-	go run main.go
-
 test: lint
 	go test ./...
 
